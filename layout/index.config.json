@@ -101,5 +101,47 @@
         "type": "Object",
         "validations": [],
         "required": false
+    },
+    {
+        "name": "modal1",
+        "displayName": "modal1",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal2",
+        "displayName": "modal2",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal3",
+        "displayName": "modal3",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal4",
+        "displayName": "modal4",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal5",
+        "displayName": "modal5",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal6",
+        "displayName": "modal6",
+        "type": "Object",
+        "validations": [],
+        "required": false
     }
 ]
