@@ -1,10 +1,10 @@
 {
-  "title": "EasyWebHub Advanced Template",
-  "description": "Thousands of developers use EasyWebHub to build personal, company, blog, ecommerce websites, support their businesses, and work together on open source technologies.",
-  "url": "https://easywebhub.com",
-  "github-url" : "http://localhost:3000/",
-  "meta-tag" : {
-    "keywords": "website templates, easywebhub, easyapp",
-    "author": "VinaAS Co.,Ltd"
-  }
+    "title": "Website Draco",
+    "description": "Description of this site Draco",
+    "url": "http://localhost:3002/",
+    "github-url": "https://easywebhub.github.io/draco/",
+    "meta-tag": {
+        "keywords": "easy web, thiết kế web đơn giản,",
+        "author": "vinaas ltd.,co"
+    }
 }

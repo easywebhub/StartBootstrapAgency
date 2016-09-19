@@ -1,63 +1,217 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <!-- <base href="{{global.github-url}}" > -->
-  <base href="." >
-  <title>{{global.title}}</title>
-  <meta name="description" content="{{ global.description }}">
-  <meta name="keywords" content="{{ global.meta-tag.keywords }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{#extend "default"}} {{#content "main"}}
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/github.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="css/frameworks-355fc5f5dc43030d495ea75b6bc8366695646a7566c13dd6ba2c2d358e1b5383.css">
-  <link rel="stylesheet" href="css/site-429acc2fc05149afec2a05196b3100560f117f753931d0afca46da6e1eeafe39.css">
-
-</head>
-<body>
-  <div class="jumbotron jumbotron-inverse" style="margin-bottom:1px;background-image:url('img/bg1.jpg');">
-    <div class="container-responsive">
-      <div class="columns">
-        <div class="homepage-hero-intro column">
-          <h1 class="display-heading-1 jumbotron-title">{{header}}</h1>
-          <p class="display-intro jumbotron-lead">{{description}}</p>
+      <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">{{head.lead}}</div>
+                <div class="intro-heading">{{head.heading}}</div>
+                <a href="{{head.url}}" class="page-scroll btn btn-xl">{{head.btn}}</a>
+            </div>
         </div>
-        <div class="homepage-hero-signup column">
-          <div class="d-none-sm-dn">
-            <form accept-charset="UTF-8" action="/join" autocomplete="off" class="home-hero-signup js-signup-form" data-form-nonce="652353d3ac5a112c9df6b943ad60e6cc2eaf1e0d" method="post">
-              <div style="margin:0;padding:0;display:inline">
-                <input name="utf8" type="hidden" value="✓">
-                <input name="authenticity_token" type="hidden" value="+xi468NyjI9V5dnz2n7llB9ykjAyiy/rvpuqdraF8pu5Nx79kfw/lPf8yHI2rC2QsWsJY10EZ3EqWoOv7pOSYQ==">
-              </div>
-              <dl class="form">
-                <dd>
-                  <label class="form-label sr-only" for="user[login]">Pick a username</label>
-                  <input type="text" name="user[login]" class="form-control form-control-lg input-block" placeholder="Pick a username" data-autocheck-url="/signup_check/username" autofocus=""> </dd>
-              </dl>
-              <dl class="form">
-                <dd>
-                  <label class="form-label sr-only" for="user[email]">Enter your email address</label>
-                  <input type="text" name="user[email]" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="Your email address" data-autocheck-url="/signup_check/email"> </dd>
-              </dl>
-              <dl class="form">
-                <dd>
-                  <label class="form-label sr-only" for="user[password]">Create a password</label>
-                  <input type="password" name="user[password]" class="form-control form-control-lg input-block" placeholder="Create a password" data-autocheck-url="/signup_check/password"> </dd>
-                <p class="form-control-note">Use at least one letter, one numeral, and seven characters.</p>
-              </dl>
-              <input type="hidden" name="source" class="js-signup-source" value="form-home">
-              <button class="btn btn-theme-green btn-jumbotron btn-block" type="submit">Sign in for EasyWeb</button>
-            </form>
-          </div>
+    </header>
+  
+    <!-- Services Section -->
+   
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{services.heading}}</h2>
+                    <h3 class="section-subheading text-muted">{{services.textMuted}}</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+               {{#each  services.items}}
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">{{services.heading}}</h4>
+                    <p class="text-muted">{{services.textMuted}}</p>
+                </div>
+                {{/each}}
+               
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  {{{contents}}}
-</body>
-</html>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{portfolio.heading}}</h2>
+                    <h3 class="section-subheading text-muted">{{portfolio.textMuted}}</h3>
+                </div>
+            </div>
+           
+            <div class="row">
+               {{#each portfolio.items}}
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="{{url}}" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                      <img src="{{image}}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{title}}</h4>
+                        <p class="text-muted">{{textMuted}}</p>
+                    </div>
+                </div>
+                {{/each}}
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+   
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{about.heading}}</h2>
+                    <h3 class="section-subheading text-muted">{{about.textMuted}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        {{#each about.items}}
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="{{image}}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>{{date}}</h4>
+                                    <h4 class="subheading">{{title}}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">{{textMuted}}</p>
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                        
+                       
+                       
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                  {{about.metadata}}
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{team.heading}}</h2>
+                    <h3 class="section-subheading text-muted">{{team.textMuted}}</h3>
+                </div>
+            </div>
+           
+            <div class="row">
+               {{#each team.items}}
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="{{image}}" class="img-responsive img-circle" alt="">
+                        <h4>{{title}}</h4>
+                        <p class="text-muted">{{textMuted}}</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {{/each}}
+              
+               
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">{{team.large}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Aside -->
+   
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+               {{#each clients}}
+                <div class="col-md-3 col-sm-6">
+                    <a href="{{url}}">
+                        <img src="{{image}}" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                {{/each}}
+              
+            </div>
+        </div>
+    </aside>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{contact.heading}}</h2>
+                    <h3 class="section-subheading text-muted">{{contact.textMuted}}</h3>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                               {{#each contact.form.items}}
+                                <div class="form-group">
+                                    <input type="{{type}}" class="form-control" placeholder="{{display}}" id="{{id}}" required data-validation-required-message="{{required}}">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                {{/each}}
+                              
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="{{contact.form.textArea.display}}" id="{{contact.form.textArea.id}}" required data-validation-required-message="{{contact.form.textArea.required}}"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="{{contact.form.btn.type}}" class="btn btn-xl">{{contact.form.btn.title}}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+{{/content}} {{/extend}}
