@@ -38,5 +38,68 @@
         "validations": [],
         "viewOnly": false,
         "required": false
+    },
+    {
+        "name": "head",
+        "displayName": "head",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "services",
+        "displayName": "services",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "portfolio",
+        "displayName": "portfolio",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "about",
+        "displayName": "about",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "team",
+        "displayName": "team",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "clients",
+        "displayName": "clients",
+        "type": "Array",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "contact",
+        "displayName": "contact",
+        "type": "Object",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "listInline",
+        "displayName": "listInline",
+        "type": "Array",
+        "validations": [],
+        "required": false
+    },
+    {
+        "name": "modal",
+        "displayName": "modal",
+        "type": "Object",
+        "validations": [],
+        "required": false
     }
 ]
